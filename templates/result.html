@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{%block home%}
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">EcoFusion</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/about/">About developers</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/about/">About Developers</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <h1 class="header center teal-text text-lighten-1">RESULT</h1>
+        <div class="table-responsive" >
+<table class="table" style="width: 50%; margin-left: 25%;text-align: center;border:solid; border-color:black; margin-top: 3%;">
+  <thead style="background-color: #000000;">
+    <tr style="color: white;">
+      <th scope="col">NIM</th>
+      <th scope="col">NAMA</th>
+      <th scope="col">KELAS</th>
+      <th scope="col">PRODI</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in hasil %}
+    <tr>
+      <td style="color: black;">{{row.0}}</td>
+      <td style="color: black;">{{row.1}}</td>
+      <td style="color: black;">{{row.2}}</td>
+      <td style="color: black;">{{row.3}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+  </div>
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">100% environmentally friendly, from materials to manufacturing</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="static/img/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Welcome to our information center! We are committed to creating positive change in the environment, and we want you to be part of our green journey. If you have any questions, suggestions, or would like to collaborate to support our recycling initiatives, please feel free to contact us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">The change starts with you, decide now for a better world</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="static/img/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+{%endblock%}
+ 
